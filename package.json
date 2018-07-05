@@ -1,0 +1,31 @@
+{
+  "name": "eth-transaction-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' ./src/server.ts",
+    "start": "npm run serve",
+    "serve": "node dist/server.js",
+    "build": "npm run tslint && npm run build-ts",
+    "build-ts": "tsc",
+    "watch": "npm run tslint && npm run watch-ts",
+    "watch-ts": "tsc -w",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.46",
+    "@types/koa-router": "^7.0.30",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
+    "nodemon": "^1.17.5",
+    "ts-node": "^7.0.0",
+    "typescript": "^2.9.2"
+  }
+}
